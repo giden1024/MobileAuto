@@ -1,0 +1,34 @@
+Login:
+   -
+    by: ID
+    locator: main_item_user
+    action: find
+   -
+    by: ID
+    locator: my_login_state_out_tv
+    action: find
+   -
+    by: ID
+    locator: login_phone_et
+    action: write
+    value: 18721705015
+   -
+    by: ID
+    locator: login_btn
+    action: find
+   -
+    by: ID
+    locator: tip_content_tv
+    action: get_text
+    expression: get_code
+   -
+    by: ID
+    locator: tip_dtn
+    action: find
+   -
+    by: ID
+    locator: et_code
+    action: find
+   -
+    action: press_key
+    value: press_message
