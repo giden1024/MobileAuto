@@ -15,7 +15,7 @@ from page.customer.user_page import UserPage
 
 
 def test_login_success():
-
+    driver = None
     u = ShopPage()
     u.to_user_page()
     u.to_login_text()
@@ -28,3 +28,9 @@ def test_login_success():
     #
     # assert shop_name == "店铺"
 
+    el1 = driver.find_element_by_xpath(
+        "/hierarchy/android.widget.FrameLayout/cn.bingoogolapple.swipebacklayout.BGASwipeBackLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/androidx.viewpager.widget.ViewPager/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.view.View/android.view.View/android.widget.FrameLayout[1]/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.RelativeLayout/android.widget.ImageView[1]")
+    el1.click()
+    el2 = driver.find_element_by_xpath(
+        "/hierarchy/android.widget.FrameLayout/cn.bingoogolapple.swipebacklayout.BGASwipeBackLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.ScrollView[3]/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.RelativeLayout/android.widget.RelativeLayout")
+    el2.click()

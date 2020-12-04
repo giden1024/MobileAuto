@@ -29,3 +29,21 @@
     username : niuhanyang
   check :
     - 必填参数未填
+
+
+   -
+    by: ID
+    locator: tip_content_tv
+    action: get_text
+    expression: get_code
+   -
+    by: ID
+    locator: tip_dtn
+    action: find
+   -
+    by: ID
+    locator: et_code
+    action: find
+   -
+    action: press_key
+    value: press_message

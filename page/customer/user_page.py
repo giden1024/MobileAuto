@@ -10,7 +10,7 @@ from common import utils
 from page.base_page import BasePage
 
 
-class UserPage(BasePage):
+class UserPage1(BasePage):
     def to_user_page(self):  # 跳转到我的页面
         self.find((By.ID,"main_item_user"))
 
@@ -34,3 +34,12 @@ class UserPage(BasePage):
             self.press_key(utils.get_press_key(x))
 
 
+class UserPage(BasePage):
+    def login(self):
+        LOGIN_FILEPATH = "../../config/action_yaml/customer/" + "user.yaml"
+        self.yaml_parse(LOGIN_FILEPATH,"Login")
+
+
+if __name__ == "__main__":
+    u = UserPage()
+    u.login()

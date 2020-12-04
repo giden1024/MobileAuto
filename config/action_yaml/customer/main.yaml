@@ -1,0 +1,24 @@
+FirstView:
+  -
+    by: id
+    locator: home_item_goods_img_iv
+    action: finds
+    item : 1
+  -
+    by: id
+    locator: vrGoodsNameTV
+    action: find
+  -
+    by: id
+    locator: vrGoodsNameTV
+    action: get_text
+  -
+    by: id
+    locator: vrGoodsSeekTV
+    action: find
+
+GetLoginTitle:
+  -
+    by: id
+    locator: login_title
+    action: get_text

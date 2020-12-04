@@ -7,6 +7,7 @@
 @desc:
 
 '''
+
 from appium import webdriver
 from appium.webdriver.webdriver import WebDriver
 
@@ -28,7 +29,7 @@ class Appium:
         caps["skipDeviceInitialization"] = "true"  # 手机首次安装appium的时候需要安装，后续不再需要，将值设置为True
         caps["autoGrantPermissions"] = "true"  # 启动时候弹窗权限默认为开启
 
-        cls.driver = webdriver.Remote("http://localhost:4723/wd/hub", caps)
+        cls.driver = webdriver.Remote("http://localhost:4723/wd/hub", caps)  # 创建一个新的会话
         cls.driver.implicitly_wait(10)  # 隐式等待10秒
 
     @classmethod

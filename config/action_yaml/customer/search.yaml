@@ -1,0 +1,23 @@
+SearchShop: #根据扬州商场搜索，获取搜索到店铺的店铺名称
+  -
+    by: id
+    locator: search_et
+    action: click
+  -
+    by: id
+    locator: search_bar
+    action: click
+  -
+    by: id
+    locator: search_bar
+    action: write
+    value: 扬州商场
+  -
+    by: id
+    locator: search_text
+    action: click
+  -
+    by: id
+    locator: home_item_shop_name_tv
+    action: get_text
+
