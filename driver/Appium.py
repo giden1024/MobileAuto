@@ -25,9 +25,14 @@ class Appium:
         caps["uiautomationName"] = "uiautomator2"
         caps["appPackage"] = "com.chinaredstar.shop.uat"  # 海狸逛逛uat包名
         caps["appActivity"] = "com.chinaredstar.shop.ui.home.MainActivity"  # 海狸逛逛Activity名称
-        caps["skipServerInstallation"] = "true"  # 手机首次安装appium的时候需要安装，后续不再需要，将值设置为True
-        caps["skipDeviceInitialization"] = "true"  # 手机首次安装appium的时候需要安装，后续不再需要，将值设置为True
-        caps["autoGrantPermissions"] = "true"  # 启动时候弹窗权限默认为开启
+        # caps["appActivity"] = ".main.MainActivity"
+        caps["skipServerInstallation"] = True  # 手机首次安装appium的时候需要安装，后续不再需要，将值设置为True
+        caps["skipDeviceInitialization"] = True  # 手机首次安装appium的时候需要安装，后续不再需要，将值设置为True
+        caps["autoGrantPermissions"] = True  # 启动时候弹窗权限默认为开启
+        caps['newCommandTimeout'] = 600  # 代码执行完成之后的等待时间，单位是秒
+        caps['noReset'] = True  # 应用启动不重新设置
+        # caps['fullReset'] = False
+        caps['dontStopAppOnReset'] = True
 
         cls.driver = webdriver.Remote("http://localhost:4723/wd/hub", caps)  # 创建一个新的会话
         cls.driver.implicitly_wait(10)  # 隐式等待10秒

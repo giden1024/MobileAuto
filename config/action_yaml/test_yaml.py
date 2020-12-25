@@ -6,7 +6,7 @@
 @desc:
 """
 import yaml
-from common.log import log
+from common import log
 
 with open("test.yaml",encoding="utf-8") as f:
     yaml_log = yaml.load(f)

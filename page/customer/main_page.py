@@ -29,6 +29,8 @@ class ChooseCity():
 
 
 if __name__ == "__main__":
+    # import os
+    # os.system("appium -g 1213.log")
     S = Search()
     print(S.search())
 
